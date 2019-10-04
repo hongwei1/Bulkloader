@@ -31,8 +31,8 @@ from io import open
 INDEX_PREFIX = 'test-'
 TYPE = 'default'
 BULK_SIZE = 10000
-DATA_DIR = '/home/work/data'
-LOG_DIR = '/home/work/data/log'
+DATA_DIR = '/Users/zhanghongwei/Documents/GitHub-Tower/Bulkloader/data'
+LOG_DIR = '/Users/zhanghongwei/Documents/GitHub-Tower/Bulkloader/data/log'
 TIMEOUT = 1
 SEPARATOR = ','
 
@@ -63,9 +63,9 @@ RUNNER_CONFIG = [
 #        'map-refcli_revenus.json'
 #    ),
     (
-        'weird',
-        'weird.txt',
-        'map-contrats.json'
+        'accounts',
+        'accounts.txt',
+        '/Users/zhanghongwei/Documents/GitHub-Tower/Bulkloader/data/accounts.json'
     ),
 #    (
 #        'assets',
@@ -148,6 +148,7 @@ class BulkLoader(object):
             i += 1
         return action
 
+    # noinspection PyInterpreter
     def send_bulk(self, actions):
         len_actions = len(actions)
         try:
