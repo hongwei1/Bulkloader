@@ -31,8 +31,8 @@ from io import open
 INDEX_PREFIX = 'test-'
 TYPE = 'default'
 BULK_SIZE = 10000
-DATA_DIR = '/Users/zhanghongwei/Documents/GitHub-Tower/Bulkloader/data'
-LOG_DIR = '/Users/zhanghongwei/Documents/GitHub-Tower/Bulkloader/data/log'
+DATA_DIR = os.path.abspath('./data')
+LOG_DIR = os.path.abspath('./data/log')
 TIMEOUT = 1
 SEPARATOR = ','
 
@@ -65,7 +65,7 @@ RUNNER_CONFIG = [
     (
         'accounts',
         'accounts.txt',
-        '/Users/zhanghongwei/Documents/GitHub-Tower/Bulkloader/data/accounts.json'
+        os.path.abspath('./data/accounts.json')
     ),
 #    (
 #        'assets',
